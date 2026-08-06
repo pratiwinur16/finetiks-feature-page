@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 // import ProblemFramingSection from "@/components/ProblemFramingSection"; // Ver 1 — hidden for now, uncomment to bring back
 import ProblemFramingSectionV2 from "@/components/ProblemFramingSectionV2";
 import FeatureSection from "@/components/FeatureSection";
+import JourneySection from "@/components/JourneySection";
 import TestimonialSection from "@/components/TestimonialSection";
 import FAQSection from "@/components/FAQSection";
 import Banner from "@/components/Banner";
@@ -33,6 +34,7 @@ export default function Home() {
         </div>
         <ProblemFramingSectionV2 />
         <FeatureSection />
+        <JourneySection />
         <TestimonialSection />
         <FAQSection />
         <Banner />

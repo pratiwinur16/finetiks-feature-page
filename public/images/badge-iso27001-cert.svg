@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 870.9 846.4">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fefefe;
+        font-size: 60px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        font-family: Arial-BoldMT, Arial;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-5, .cls-4 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        font-size: 33px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-5, .cls-4 {
+        fill: #2b2a29;
+        font-size: 52.33px;
+      }
+
+      .cls-3 {
+        font-size: 50px;
+      }
+
+      .cls-6, .cls-7 {
+        fill: #0d8b04;
+      }
+
+      .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke-width: 0px;
+      }
+
+      .cls-6, .cls-8 {
+        fill-rule: evenodd;
+      }
+
+      .cls-4 {
+        font-family: TimesNewRomanPS-BoldMT, 'Times New Roman';
+      }
+
+      .cls-10 {
+        fill: #fe0000;
+        stroke: #fefefe;
+        stroke-miterlimit: 10;
+        stroke-width: 1px;
+      }
+
+      .cls-8 {
+        fill: #727271;
+      }
+
+      .cls-9 {
+        fill: #880304;
+      }
+    </style>
+  </defs>
+  <path class="cls-8" d="M405.35,1.1c109.4-7.8,212.2,26.8,292,89.8l-60.7,73.7c-61.6-48-140.6-74.3-224.6-68.3-180.4,12.8-316.4,169.6-303.6,350.1,12.9,180.6,169.7,316.5,350.2,303.7,180.6-12.9,316.5-169.7,303.7-350.2-4.4-61.6-25.6-118.1-58.8-165.2l62.4-75.8c51.9,64.7,85.3,145.2,91.6,234.2,16.6,233.1-159,435.6-392,452.2C232.45,861.9,29.95,686.3,13.35,453.3-3.25,220.2,172.35,17.7,405.35,1.1h0Z"/>
+  <text class="cls-5" transform="translate(766.25 152.74)"><tspan x="0" y="0"> </tspan></text>
+  <g>
+    <g>
+      <path class="cls-6" d="M227.09,375c-10.7-10.8-5.1-20.9,8.2-29.9l48.5-33.6c23.5-15.5,34.5-3.4,50.9,12.8,21.3,22.5,41.9,65.9,62.8,119.8,4.4,9,11.3,10,17.4,1.2C549.69,252.4,694.19,122.7,826.59,49c10.2-5.7,19.4,1.4,8.9,13.6-165.4,138.2-294.8,318.7-380.7,550.2-5.8,13.8-7.5,20.7-22.9,22.1l-48.7-.1c-18.5.9-26.6-13.5-36.1-40.3-35.4-83.9-73.4-182.4-120-219.5h0Z"/>
+      <path id="_1" data-name="1" class="cls-7" d="M227.09,375c-10.7-10.8-5.1-20.9,8.2-29.9l48.5-33.6c23.5-15.5,34.5-3.4,50.9,12.8,21.3,22.5,41.9,65.9,62.8,119.8,4.4,9,11.3,10,17.4,1.2C549.69,252.4,694.19,122.7,826.59,49c10.2-5.7,19.4,1.4,8.9,13.6-165.4,138.2-294.8,318.7-380.7,550.2-5.8,13.8-7.5,20.7-22.9,22.1l-48.7-.1c-18.5.9-26.6-13.5-36.1-40.3-35.4-83.9-73.4-182.4-120-219.5h0Z"/>
+    </g>
+    <path class="cls-10" d="M434.99,191.1h0c64.3.1,122.5,26.2,164.6,68.2,42.1,42,68.1,100.3,68.1,164.5h.1v.2h-.1c0,64.3-26.1,122.5-68.2,164.5-42.1,42.1-100.2,68.1-164.5,68.1v.1h-.2v-.1c-64.3,0-122.4-26.1-164.5-68.2h0c-42.1-42.1-68.1-100.2-68.1-164.5h-.1v-.2h.1c0-64.3,26.1-122.5,68.2-164.5,42.1-42,100.3-68,164.6-68.1h0ZM434.99,217.3h0l-.1.1v-.1c-56.9,0-108.5,23.2-145.9,60.5-37.4,37.4-60.6,89-60.6,146h.1v.2h-.1c0,56.9,23.1,108.5,60.5,145.9v.1c37.4,37.4,89,60.5,146,60.5v-.1h.2v.1c56.9,0,108.5-23.1,145.9-60.5,37.4-37.4,60.6-89,60.6-146h-.1v-.2h.1c0-56.9-23.2-108.5-60.5-145.9-37.5-37.4-89.1-60.6-146.1-60.6Z"/>
+    <path class="cls-9" d="M167.19,456.05c-8.2-2.7-12.7-8.7-13.5-17.9h1.2c1.1,4.8,2.6,8.3,4.6,10.6,1.9,2.4,4.8,4.8,8.5,7l-.8.3h0ZM167.79,456.75c.9.1,1.7.1,2.4.1.7.1,1.8.3,3.4.5,4.6-.4,7.4-.7,8.5-.9,3.6-.7,6.4-2.4,8.4-5.2,2-2.7,3-5.8,3-9.2s-.9-6.5-2.6-9.1c-1.7-2.5-4.1-4.4-7.2-5.5-3.1-1.2-8-2.5-14.7-4-6.8-1.4-12-3.1-15.7-5-3.8-1.9-6.8-5.4-9-10.3-1.1-2.4-1.8-5.4-2.1-8.9.3-4.6,1.5-8.9,3.8-13.2,5-7.4,12.9-11.1,23.8-11.1,3.1,0,7.5.7,13,2,5.6,1.3,9,2,10,2.2,2-.1,3.8-.4,5.3-.9,1.4-.5,2.4-.7,3-.9-3.6,6.1-7.2,13.5-11,22.1-1.1-5.4-3.4-9.8-6.9-13.5-3.5-3.6-7.8-5.5-12.9-5.5s-8.9,1.7-12,4.8c-2.4,2.6-3.6,5.9-3.6,10,0,1.2.1,2.4.3,3.8.4,3,2.3,5.4,5.7,7,3.4,1.7,8.3,3.1,14.9,4.6,6.4,1.5,9.8,2.4,10.2,2.4,6.5,1.8,11.1,5,13.8,9.4,2.6,4.6,4,9.5,4,14.9,0,7.7-2.8,13.7-8.5,18.2-5.7,4.4-12.4,6.7-20.1,6.9-2-.1-4.6-.3-7.7-.7-2.5-.4-6.5-1.5-12.2-3.2-5.6-1.7-9.1-2.5-10.6-2.6-3.5,0-6.1.9-7.9,2.7l-.3-.3c4.3-6.9,8.1-14.9,11.4-23.9,2.3,12.6,8.9,20,20.1,22.3h0ZM200.89,419.75l.6.3c5.2,2.9,7.8,8.6,7.8,17,0,9.3-3.2,16.7-9.8,22.3-6.5,5.7-14.5,8.5-23.8,8.5-3,0-7.9-.9-14.5-2.7-6.7-1.7-11.8-2.6-15.3-2.6-2.8,0-4.8.3-6,1.1l-.7-1.4c1.6-1,3.9-1.5,6.9-1.5,3.3,0,7.9.8,13.6,2.2,5.7,1.7,9.5,2.5,11.6,2.7,1.3.1,2.6.1,3.8.1,7.5,0,13.9-1.6,19.2-4.7,6.2-3.6,10.4-9.2,12.6-17.1.6-2,.9-4.3.9-6.8-.2-6.7-2.4-12.5-6.9-17.4h0ZM166.59,406.75c-2.2-.7-4.2-2.2-5.8-4.3-1.8-2-2.8-4.3-2.8-6.9,1.6-7.9,5.9-11.9,12.9-11.9,3.2,0,6.4.9,9.7,2.6,3.2,1.7,5.3,4.1,6.3,7.1l-.6-.5c-4.5-4.8-9.5-7.1-15-7.1-6.5,0-10.4,3.4-11.7,10.4.2,1.6.7,3,1.4,4.1.7,1.2,1.7,2.4,2.8,3.5s2.2,2.1,3.2,3h-.4ZM192.29,401.45c5.5-12.5,9.2-19.9,11.1-22.1l.9,1.4c-2.4,4.8-4.3,8.9-5.8,12.1-1.6,3.4-3.2,6.7-5,10.1l-1.2-1.5h0ZM215.09,377.15h28.3l-7.5,8.7v67.8l7.5,7.7h-28.3l8.9-7.7v-67.8l-8.9-8.7ZM245.19,379.05l1.2.9-6.1,6.5v66.3l11.1,13h-31.6l-1.5-1.8h30l-9.4-10.4v-67.2l6.3-7.3h0ZM283.89,456.15c-8.2-2.7-12.7-8.7-13.5-17.9h1.2c1.1,4.8,2.6,8.3,4.6,10.6,1.9,2.4,4.8,4.8,8.5,7l-.8.3h0ZM284.49,456.85c.9.1,1.7.1,2.4.1.7.1,1.8.3,3.4.5,4.6-.4,7.4-.7,8.5-.9,3.6-.7,6.4-2.4,8.4-5.2,2-2.7,3-5.8,3-9.2s-.9-6.5-2.6-9.1c-1.7-2.5-4.1-4.4-7.2-5.5-3.1-1.2-8-2.5-14.7-4-6.8-1.4-12-3.1-15.7-5-3.8-1.9-6.8-5.4-9-10.3-1.1-2.4-1.8-5.4-2.1-8.9.3-4.6,1.5-8.9,3.8-13.2,5-7.4,12.9-11.1,23.8-11.1,3.1,0,7.5.7,13,2,5.6,1.3,9,2,10,2.2,2-.1,3.8-.4,5.3-.9,1.4-.5,2.4-.7,3-.9-3.6,6.1-7.2,13.5-11,22.1-1.1-5.4-3.4-9.8-6.9-13.5-3.5-3.6-7.8-5.5-12.9-5.5s-8.9,1.7-12,4.8c-2.4,2.6-3.6,5.9-3.6,10,0,1.2.1,2.4.3,3.8.4,3,2.3,5.4,5.7,7,3.4,1.7,8.3,3.1,14.9,4.6,6.4,1.5,9.8,2.4,10.2,2.4,6.5,1.8,11.1,5,13.8,9.4,2.6,4.6,4,9.5,4,14.9,0,7.7-2.8,13.7-8.5,18.2-5.7,4.4-12.4,6.7-20.1,6.9-2-.1-4.6-.3-7.7-.7-2.5-.4-6.5-1.5-12.2-3.2-5.6-1.7-9.1-2.5-10.6-2.6-3.5,0-6.1.9-7.9,2.7l-.3-.3c4.3-6.9,8.1-14.9,11.4-23.9,2.2,12.4,8.9,19.8,19.9,22.1l.2.2ZM317.59,419.85l.6.3c5.2,2.9,7.8,8.6,7.8,17,0,9.3-3.2,16.7-9.8,22.3-6.5,5.7-14.5,8.5-23.8,8.5-3,0-7.9-.9-14.5-2.7-6.7-1.7-11.8-2.6-15.3-2.6-2.8,0-4.8.3-6,1.1l-.7-1.4c1.6-1,3.9-1.5,6.9-1.5,3.3,0,7.9.8,13.6,2.2,5.7,1.7,9.5,2.5,11.6,2.7,1.3.1,2.6.1,3.8.1,7.5,0,13.9-1.6,19.2-4.7,6.2-3.6,10.4-9.2,12.6-17.1.6-2,.9-4.3.9-6.8-.1-6.8-2.4-12.6-6.9-17.4h0ZM283.29,406.85c-2.2-.7-4.2-2.2-5.8-4.3-1.8-2-2.8-4.3-2.8-6.9,1.6-7.9,5.9-11.9,12.9-11.9,3.2,0,6.4.9,9.7,2.6,3.2,1.7,5.3,4.1,6.3,7.1l-.6-.5c-4.5-4.8-9.5-7.1-15-7.1-6.5,0-10.4,3.4-11.7,10.4.2,1.6.7,3,1.4,4.1.7,1.2,1.7,2.4,2.8,3.5,1.1,1.1,2.2,2.1,3.2,3h-.4ZM308.99,401.45c5.5-12.5,9.2-19.9,11.1-22.1l.9,1.4c-2.4,4.8-4.3,8.9-5.8,12.1-1.6,3.4-3.2,6.7-5,10.1l-1.2-1.5h0ZM428.19,402.65c3.5-9.5,6.9-17.1,10.2-22.7l.6,1.1c-2.1,4-5.2,11.6-9.4,22.7l-1.4-1.1h0ZM425.49,401.15c-2.2-15.3-8.1-23.1-17.8-23.1-5.8,0-10.2,1.8-13.2,5.6-3.1,3.9-5.2,8.4-6.1,13.7-1,5.4-1.6,11.3-1.8,17.7.2.7.3,1.5.3,2.8,0,2.9-.1,5.4-.3,7.3.2,9.6,1.5,17.6,3.9,24.2,2.4,6.5,7.2,9.7,14.5,9.7s13.2-1,16.9-3c3.6-2,5.9-7.3,7.1-15.9.4-3.2.6-5.3.6-6.2.3-.8,1-1.3,2.1-1.3,1.6,0,2.4,1.1,2.4,3.4,0,3.2-.7,7.1-2,11.6-2,5.9-4.9,10-8.7,12.3-3.9,2.3-9.5,3.6-16.8,4h-1.2c-11.1,0-19.9-4.2-26.4-12.7-6.2-8.3-9.3-18.4-9.3-30.5v-1.8c0-12.8,3.2-23.6,9.6-32.4,6.5-8.9,15.5-13.3,27-13.3,3,0,7.1,1,12.2,2.9,5.2,1.9,9.2,3,12,3.3,2.8-.3,5-.9,6.4-1.8v.6c-5.5,11.3-9.2,19.2-11.1,23.6l-.3-.3v-.4h0ZM414.09,384.05c-2.1-1.2-4.4-1.8-7.1-1.8-5.3,0-8.9,3.1-10.8,9.2-1.2,2.8-2,5.7-2.4,8.9-.5,3.1-.8,6.5-.9,10-.1,3.6-.2,6.1-.3,7.6,0,8.9.7,16.2,2,22.1,1.2,5.9,3.9,11.6,8.1,16.8-3.8-1.6-6.8-5.9-9.1-13-1.9-6.3-2.8-14.9-2.8-25.9.1-1.1.2-2.6.3-4.6,0-1.8.1-4,.3-6.7.2-2.6.5-4.9.9-7,.3-2,.9-4.6,2-7.6,1.2-3.2,3-5.9,5.4-8.2,2.3-2.1,4.7-3.2,7.2-3.2,3,0,5.4,1.1,7.3,3.4h-.1ZM388.39,464.55l-1.3-.9c7.9,2.8,14.7,4.2,20.6,4.2,9.3,0,16.5-3,21.7-8.9,5.1-5.9,7.9-14,8.4-24.3l1.5,1.5c-1,11-4.2,19.1-9.4,24.4-5.4,5.5-12.4,8.2-21,8.2-6.1.1-13-1.3-20.5-4.2ZM505.39,400.65c.2-2.4,1.2-5.8,3-10.2s3.6-7.4,5.2-9l.7,1.2c-2.7,3.4-5.3,9.7-7.8,19l-1.1-1h0ZM509.19,443.85c1.7,5.5,5.1,11.4,10.3,17.6l-2.6,4.4h-65.2l-1.5-1.8h65.8l1.8-2.6c-2-2.1-4.1-5.1-6.3-8.8-2.2-3.8-3.5-7.1-3.9-9.9l1.6,1.1ZM473.19,423.85v29.9h8.3c5.5,0,10.2-.9,13.9-2.6,3.7-1.7,6.3-5.4,7.9-11.1.4,4.4,1.3,7.7,2.6,9.8,1.3,2.3,3.9,6.1,7.8,11.6h-66.9l8.8-7.8v-29.9h-1.2c-2.2,0-4.6.7-7.1,2.3l-.9-.9c2.7-1.9,5.4-2.9,8.3-2.9h.9v-2.6h-2.4c-4,0-7.1,1.4-9.3,4.2v-.3c.5-4.6,1.7-7.4,3.4-8.6,1.8-1.2,4.6-1.8,8.3-1.8v-27.5l-9.1-8.3h65.9c-2.2,1.8-4.2,4.8-6.1,8.9-2,4.1-3,7.8-3,11.1-2.2-6.4-5.2-10.3-8.7-11.7-3.6-1.3-9.5-2-17.7-2h-9.3v29.6h4v-26.5h11.4c4.5,0,7.8.3,9.9.7,2,.5,3.2,1.7,3.6,3.4v.3c-1.2-2-4.3-3-9.3-3h-14.1v24.9h12.3l8.3-11.6v28.8l-8.3-11.3h-17.8v34.7h4v-31.4h14.7l1.2,1.5h-14.4.1v.1h0ZM498.09,434.15l-1.5-1.5v-28.9l1.5,1.8v28.6h0ZM581.19,473.95c3.4-2.3,8.1-4.8,14.3-7.3,6-2.5,10.1-3.9,12.3-4.2-7.4-5.5-13.8-11.7-19.2-18.6-5.5-7-10.1-14.5-13.8-22.6,7.3-2,12.7-5.2,16.3-9.4,3-3.6,4.5-7.8,4.5-12.6,0-.9-.1-1.7-.1-2.6-.3-3.6-1.7-6.9-4-9.7l-.3-.6c3.7,3.6,5.5,8.1,5.5,13.8,0,5.2-1.7,9.7-5.3,13.7-3.5,4-8.2,6.8-14.1,8.7,3.6,8,8.5,15.6,14.7,22.8,6.1,7.2,12.7,13,19.7,17.6-5.3,1.7-10.5,3.4-15.6,5.3-5.1,2-9.5,4.3-13.2,6.9l-1.7-1.2h0ZM551.39,418.25c17.5-2.3,26.2-9,26.2-20.1,0-5.8-2-10.4-5.8-13.5-3.9-3-8.9-4.6-14.8-4.6-4.1,0-7.5.7-10,2v36.4c1.5,0,2.4-.1,3-.1v-33.2c1.6-.1,3.1-.2,4.5-.3h5.1c6.8,0,11.8,1.7,15,5-3.5-2.3-7.9-3.5-13.2-3.5h-5.2c-1.4.1-3,.2-4.6.3l-.2,31.6h0ZM529.59,380.85c6.3-5.5,15.2-8.2,26.7-8.2,9.1,0,17.2,2.2,24.3,6.5,6.9,4.4,10.4,10.8,10.4,19.3,0,9.8-7,16.9-21,21.3,3,8,7.9,16.2,14.7,24.6,6.8,8.4,12.5,14.1,17.1,17.2-3.2.7-7.8,2.4-13.7,5-6.1,2.8-9.9,4.8-11.4,5.9,0-2.7-.7-7.3-2.2-13.7-1.6-6.3-3.4-12.5-5.4-18.8s-3.6-10.9-5-13.8c-3,1.7-7.3,2.4-12.7,2.4v24.3l11.1,13h-31.7l-1.5-1.8h29.8l-9.3-10.3v-26.7c1.6-.1,3.8-.3,6.7-.6,2.8-.3,5.2-.9,7.1-1.7l-1.5-3c-2.9.9-8,1.7-15.3,2.4v29.6l7.9,7.5h-28.5l8.5-7.5v-23.1c-2.3,0-5,.7-7.9,2l-1.1-1.2c3-1.6,6-2.6,9-2.9v-3h-.7c-1.1,0-2.8.2-5,.5-2.7.5-4.8,1-6.3,1.4l3.3-7.7c4.8,0,7.7-.1,8.7-.3v-33.7l-5.1-4.9h0ZM668.99,386.85h9c4.5,0,7.7.2,9.7.6,2,.5,3.2,1.7,3.8,3.5v.3c-1.3-2-4.4-3-9.4-3h-11.7v64.6l11.2,13h-31.6l-1.5-1.8h29.8l-9.3-10.4v-66.8h0ZM665.99,383.55v70.2l7.7,7.7h-28.5l8.8-7.7v-65.5h-9.1c-5.3,0-8.9.6-10.8,1.8-2,1.3-3.1,4.8-3.4,10.6h-1.8c.1-4.5.7-7.7,2-9.6,1.2-1.9,2.8-3.2,4.8-3.6s5.1-.6,9.3-.6h9.1v-3.4h-9.1c-8,0-13.2.7-15.6,2-2.4,1.3-3.6,5.2-3.6,11.7l-9.1-19.9h87.3l-9.1,19.9c0-4.5-.6-7.7-1.8-9.6-1.3-1.9-3.2-3-5.5-3.5-2.5-.4-6.5-.6-11.9-.6h-9.4l-.3.1ZM697.29,399.05c3.3-9.3,6.3-15.7,8.9-19.3l.7,1.1c-2.4,3.6-5.2,9.9-8.4,19l-1.2-.8ZM719.69,465.85c-2.2,0-4.2-.8-5.8-2.4-1.6-1.7-2.4-3.6-2.4-5.9s.9-4.3,2.6-5.9c1.6-1.5,3.5-2.2,5.7-2.2s4,.7,5.7,2.2c1.6,1.6,2.4,3.6,2.4,5.9s-.8,4.3-2.4,5.9c-1.6,1.6-3.5,2.4-5.8,2.4h0ZM725.79,450.15l.6-.1c4.8,1.8,7.2,5.2,7.2,10,0,2.4-.9,4.7-2.5,6.7-1.8,2-4.2,3-7.1,3s-5.5-.9-7.9-2.8v-.7c2.2,1.5,4.4,2.2,6.7,2.2,2.6,0,4.7-.9,6.3-2.7,1.5-1.7,2.2-3.8,2.2-6.3.1-4.1-1.8-7.2-5.5-9.3Z"/>
+    <text class="cls-4" transform="translate(781.18 153.74)"><tspan x="0" y="0">TM</tspan></text>
+  </g>
+  <text class="cls-1" transform="translate(192.45 153.4) rotate(-41)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-3" transform="translate(177.03 168.69) rotate(-41.55)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-3" transform="translate(187.12 159.75) rotate(-39.53)"><tspan x="0" y="0">I</tspan></text>
+  <text class="cls-3" transform="translate(197.12 151.09) rotate(-36.11)"><tspan x="0" y="0">S</tspan></text>
+  <text class="cls-3" transform="translate(223.14 131.9) rotate(-30.88)"><tspan x="0" y="0">O</tspan></text>
+  <text class="cls-3" transform="translate(256.08 112.66) rotate(-27.05)"><tspan x="0" y="0">/</tspan></text>
+  <text class="cls-3" transform="translate(268.09 106.52) rotate(-25.03)"><tspan x="0" y="0">I</tspan></text>
+  <text class="cls-3" transform="translate(279.92 100.65) rotate(-21.59)"><tspan x="0" y="0">E</tspan></text>
+  <text class="cls-3" transform="translate(309.98 88.64) rotate(-16.51)"><tspan x="0" y="0">C</tspan></text>
+  <text class="cls-3" transform="translate(343.97 78.91) rotate(-12.85)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-3" transform="translate(356.88 75.75) rotate(-9.78)"><tspan x="0" y="0">2</tspan></text>
+  <text class="cls-3" transform="translate(383.5 71.14) rotate(-5.69)"><tspan x="0" y="0">7</tspan></text>
+  <text class="cls-3" transform="translate(410.38 68.43) rotate(-1.61)"><tspan x="0" y="0">0</tspan></text>
+  <text class="cls-3" transform="translate(437.35 67.64) rotate(2.45)"><tspan x="0" y="0">0</tspan></text>
+  <text class="cls-3" transform="translate(464.34 68.77) rotate(6.48)"><tspan x="0" y="0">1</tspan></text>
+  <text class="cls-3" transform="translate(491.23 71.88) rotate(10.18)"><tspan x="0" y="0">:</tspan></text>
+  <text class="cls-3" transform="translate(507.15 74.5) rotate(12.85)"><tspan x="0" y="0">2</tspan></text>
+  <text class="cls-3" transform="translate(533.49 80.47) rotate(16.89)"><tspan x="0" y="0">0</tspan></text>
+  <text class="cls-3" transform="translate(559.34 88.29) rotate(20.96)"><tspan x="0" y="0">2</tspan></text>
+  <text class="cls-3" transform="translate(584.56 97.92) rotate(25.04)"><tspan x="0" y="0">2</tspan></text>
+  <text class="cls-2" transform="translate(143.53 173.54) rotate(129.9)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-2" transform="translate(137.52 180.73) rotate(128.51)"><tspan x="0" y="0">I</tspan></text>
+  <text class="cls-2" transform="translate(131.53 188.1) rotate(126.28)"><tspan x="0" y="0">n</tspan></text>
+  <text class="cls-2" transform="translate(119.48 204.69) rotate(123.9)"><tspan x="0" y="0">f</tspan></text>
+  <text class="cls-2" transform="translate(113.08 214.04) rotate(121.52)"><tspan x="0" y="0">o</tspan></text>
+  <text class="cls-2" transform="translate(102.43 231.58) rotate(119)"><tspan x="0" y="0">r</tspan></text>
+  <text class="cls-2" transform="translate(95.78 243.13) rotate(115.77)"><tspan x="0" y="0">m</tspan></text>
+  <text class="cls-2" transform="translate(82.97 270.12) rotate(112.1)"><tspan x="0" y="0">a</tspan></text>
+  <text class="cls-2" transform="translate(76.01 287.46) rotate(109.84)"><tspan x="0" y="0">t</tspan></text>
+  <text class="cls-2" transform="translate(72.22 298) rotate(108.3)"><tspan x="0" y="0">i</tspan></text>
+  <text class="cls-2" transform="translate(69.14 307.01) rotate(106.04)"><tspan x="0" y="0">o</tspan></text>
+  <text class="cls-2" transform="translate(63.46 326.79) rotate(102.96)"><tspan x="0" y="0">n</tspan></text>
+  <text class="cls-2" transform="translate(58.98 346.79) rotate(100.71)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-2" transform="translate(57.08 356.11) rotate(98.34)"><tspan x="0" y="0">S</tspan></text>
+  <text class="cls-2" transform="translate(53.89 378.34) rotate(95.3)"><tspan x="0" y="0">e</tspan></text>
+  <text class="cls-2" transform="translate(52.13 397.02) rotate(92.35)"><tspan x="0" y="0">c</tspan></text>
+  <text class="cls-2" transform="translate(51.31 415.72) rotate(89.67)"><tspan x="0" y="0">u</tspan></text>
+  <text class="cls-2" transform="translate(51.52 436.24) rotate(87.17)"><tspan x="0" y="0">r</tspan></text>
+  <text class="cls-2" transform="translate(52.2 449.31) rotate(85.49)"><tspan x="0" y="0">i</tspan></text>
+  <text class="cls-2" transform="translate(52.93 458.67) rotate(83.95)"><tspan x="0" y="0">t</tspan></text>
+  <text class="cls-2" transform="translate(54.05 469.93) rotate(81.71)"><tspan x="0" y="0">y</tspan></text>
+  <text class="cls-2" transform="translate(56.42 485.91) rotate(79.97)"><tspan x="0" y="0">,</tspan></text>
+  <text class="cls-2" transform="translate(58.05 495.15) rotate(78.56)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-2" transform="translate(59.8 504.55) rotate(76.02)"><tspan x="0" y="0">C</tspan></text>
+  <text class="cls-2" transform="translate(65.75 528.1) rotate(72.78)"><tspan x="0" y="0">y</tspan></text>
+  <text class="cls-2" transform="translate(71.3 546.05) rotate(69.83)"><tspan x="0" y="0">b</tspan></text>
+  <text class="cls-2" transform="translate(78.43 565.35) rotate(66.88)"><tspan x="0" y="0">e</tspan></text>
+  <text class="cls-2" transform="translate(85.84 582.53) rotate(64.49)"><tspan x="0" y="0">r</tspan></text>
+  <text class="cls-2" transform="translate(91.47 594.45) rotate(62.11)"><tspan x="0" y="0">s</tspan></text>
+  <text class="cls-2" transform="translate(100.25 611.02) rotate(59.31)"><tspan x="0" y="0">e</tspan></text>
+  <text class="cls-2" transform="translate(109.84 627.15) rotate(56.52)"><tspan x="0" y="0">c</tspan></text>
+  <text class="cls-2" transform="translate(120.19 642.82) rotate(53.6)"><tspan x="0" y="0">u</tspan></text>
+  <text class="cls-2" transform="translate(132.43 659.28) rotate(51.1)"><tspan x="0" y="0">r</tspan></text>
+  <text class="cls-2" transform="translate(140.66 669.44) rotate(49.44)"><tspan x="0" y="0">i</tspan></text>
+  <text class="cls-2" transform="translate(146.77 676.59) rotate(47.91)"><tspan x="0" y="0">t</tspan></text>
+  <text class="cls-2" transform="translate(154.31 685.03) rotate(45.68)"><tspan x="0" y="0">y</tspan></text>
+  <text class="cls-2" transform="translate(167.4 698.31) rotate(43.6)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-2" transform="translate(174.21 704.9) rotate(41.51)"><tspan x="0" y="0">a</tspan></text>
+  <text class="cls-2" transform="translate(188.26 717.36) rotate(38.59)"><tspan x="0" y="0">n</tspan></text>
+  <text class="cls-2" transform="translate(204.37 730.2) rotate(35.52)"><tspan x="0" y="0">d</tspan></text>
+  <text class="cls-2" transform="translate(221.11 742) rotate(33.29)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-2" transform="translate(229 747.34) rotate(30.9)"><tspan x="0" y="0">P</tspan></text>
+  <text class="cls-2" transform="translate(248.27 758.74) rotate(28.24)"><tspan x="0" y="0">r</tspan></text>
+  <text class="cls-2" transform="translate(259.82 764.9) rotate(26.55)"><tspan x="0" y="0">i</tspan></text>
+  <text class="cls-2" transform="translate(268.25 769.21) rotate(24.44)"><tspan x="0" y="0">v</tspan></text>
+  <text class="cls-2" transform="translate(285.35 776.96) rotate(21.61)"><tspan x="0" y="0">a</tspan></text>
+  <text class="cls-2" transform="translate(302.79 783.86) rotate(18.79)"><tspan x="0" y="0">c</tspan></text>
+  <text class="cls-2" transform="translate(320.55 789.9) rotate(15.97)"><tspan x="0" y="0">y</tspan></text>
+  <text class="cls-2" transform="translate(338.54 794.95) rotate(13.86)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-2" transform="translate(347.74 797.35) rotate(11.48)"><tspan x="0" y="0">P</tspan></text>
+  <text class="cls-2" transform="translate(369.71 801.7) rotate(8.83)"><tspan x="0" y="0">r</tspan></text>
+  <text class="cls-2" transform="translate(382.74 803.79) rotate(6.33)"><tspan x="0" y="0">o</tspan></text>
+  <text class="cls-2" transform="translate(402.99 805.92) rotate(4.21)"><tspan x="0" y="0">t</tspan></text>
+  <text class="cls-2" transform="translate(414.17 806.79) rotate(1.84)"><tspan x="0" y="0">e</tspan></text>
+  <text class="cls-2" transform="translate(432.92 807.38) rotate(-.93)"><tspan x="0" y="0">c</tspan></text>
+  <text class="cls-2" transform="translate(451.58 807) rotate(-3.15)"><tspan x="0" y="0">t</tspan></text>
+  <text class="cls-2" transform="translate(462.77 806.37) rotate(-4.69)"><tspan x="0" y="0">i</tspan></text>
+  <text class="cls-2" transform="translate(472.25 805.69) rotate(-6.93)"><tspan x="0" y="0">o</tspan></text>
+  <text class="cls-2" transform="translate(492.71 803.2) rotate(-10.02)"><tspan x="0" y="0">n</tspan></text>
+  <text class="cls-2" transform="translate(512.87 799.52) rotate(-12.28)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-2" transform="translate(522.36 797.78) rotate(-15.52)"><tspan x="0" y="0">—</tspan></text>
+  <text class="cls-2" transform="translate(554.49 788.5) rotate(-18.75)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-2" transform="translate(563.38 785.48) rotate(-20.16)"><tspan x="0" y="0">I</tspan></text>
+  <text class="cls-2" transform="translate(572.33 782.3) rotate(-22.41)"><tspan x="0" y="0">n</tspan></text>
+  <text class="cls-2" transform="translate(591.25 774.39) rotate(-24.79)"><tspan x="0" y="0">f</tspan></text>
+  <text class="cls-2" transform="translate(601.58 769.71) rotate(-27.17)"><tspan x="0" y="0">o</tspan></text>
+  <text class="cls-2" transform="translate(619.79 760.26) rotate(-29.69)"><tspan x="0" y="0">r</tspan></text>
+  <text class="cls-2" transform="translate(631.47 753.85) rotate(-32.9)"><tspan x="0" y="0">m</tspan></text>
+  <text class="cls-2" transform="translate(656.45 737.47) rotate(-36.52)"><tspan x="0" y="0">a</tspan></text>
+  <text class="cls-2" transform="translate(671.4 726.3) rotate(-38.74)"><tspan x="0" y="0">t</tspan></text>
+  <text class="cls-2" transform="translate(680.14 719.28) rotate(-40.26)"><tspan x="0" y="0">i</tspan></text>
+  <text class="cls-2" transform="translate(687.44 713.22) rotate(-42.48)"><tspan x="0" y="0">o</tspan></text>
+  <text class="cls-2" transform="translate(702.63 699.3) rotate(-45.54)"><tspan x="0" y="0">n</tspan></text>
+  <text class="cls-2" transform="translate(716.89 684.6) rotate(-47.76)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-2" transform="translate(723.38 677.64) rotate(-50.13)"><tspan x="0" y="0">S</tspan></text>
+  <text class="cls-2" transform="translate(737.73 660.37) rotate(-53.2)"><tspan x="0" y="0">e</tspan></text>
+  <text class="cls-2" transform="translate(748.97 645.33) rotate(-55.99)"><tspan x="0" y="0">c</tspan></text>
+  <text class="cls-2" transform="translate(759.49 629.76) rotate(-58.94)"><tspan x="0" y="0">u</tspan></text>
+  <text class="cls-2" transform="translate(770.01 612.13) rotate(-61.46)"><tspan x="0" y="0">r</tspan></text>
+  <text class="cls-2" transform="translate(776.22 600.63) rotate(-63.15)"><tspan x="0" y="0">i</tspan></text>
+  <text class="cls-2" transform="translate(780.47 592.26) rotate(-64.7)"><tspan x="0" y="0">t</tspan></text>
+  <text class="cls-2" transform="translate(785.37 582.06) rotate(-66.95)"><tspan x="0" y="0">y</tspan></text>
+  <text class="cls-2" transform="translate(792.59 564.85) rotate(-69.06)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-2" transform="translate(796.21 555.99) rotate(-71.88)"><tspan x="0" y="0">M</tspan></text>
+  <text class="cls-2" transform="translate(804.78 529.3) rotate(-75.4)"><tspan x="0" y="0">a</tspan></text>
+  <text class="cls-2" transform="translate(809.53 511.13) rotate(-78.35)"><tspan x="0" y="0">n</tspan></text>
+  <text class="cls-2" transform="translate(813.65 490.97) rotate(-81.28)"><tspan x="0" y="0">a</tspan></text>
+  <text class="cls-2" transform="translate(816.5 472.42) rotate(-84.19)"><tspan x="0" y="0">g</tspan></text>
+  <text class="cls-2" transform="translate(818.65 451.89) rotate(-87.65)"><tspan x="0" y="0">e</tspan></text>
+  <text class="cls-2" transform="translate(819.68 433.12) rotate(-90.65)"><tspan x="0" y="0">m</tspan></text>
+  <text class="cls-2" transform="translate(819.15 403.27) rotate(-94.27)"><tspan x="0" y="0">e</tspan></text>
+  <text class="cls-2" transform="translate(817.76 384.55) rotate(-97.21)"><tspan x="0" y="0">n</tspan></text>
+  <text class="cls-2" transform="translate(815.09 364.22) rotate(-99.6)"><tspan x="0" y="0">t</tspan></text>
+  <text class="cls-2" transform="translate(813.2 353.15) rotate(-101.15)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-2" transform="translate(811.49 343.79) rotate(-103.54)"><tspan x="0" y="0">S</tspan></text>
+  <text class="cls-2" transform="translate(806.17 321.96) rotate(-106.65)"><tspan x="0" y="0">y</tspan></text>
+  <text class="cls-2" transform="translate(800.78 303.98) rotate(-109.47)"><tspan x="0" y="0">s</tspan></text>
+  <text class="cls-2" transform="translate(794.48 286.39) rotate(-111.72)"><tspan x="0" y="0">t</tspan></text>
+  <text class="cls-2" transform="translate(790.35 275.86) rotate(-113.96)"><tspan x="0" y="0">e</tspan></text>
+  <text class="cls-2" transform="translate(782.83 258.54) rotate(-117.61)"><tspan x="0" y="0">m</tspan></text>
+</svg>

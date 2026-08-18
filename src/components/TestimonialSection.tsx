@@ -1,13 +1,53 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import Lottie from "lottie-react";
 import { useLanguage } from "./LanguageProvider";
+import heartsFeedbackLottie from "@/lottie/hearts-feedback.json";
 
-const HEADER = {
-  id: "Review Pengguna di Google Play dan Apps Store",
-  en: "User Reviews on Google Play and the App Store",
+const LOVE_BADGE = {
+  id: { line1: "Lebih dari 30.000 Pengguna", line2: "Cinta FINETIKS" },
+  en: { line1: "Over 30,000 Users", line2: "Love FINETIKS" },
 };
+
+function LoveBadge() {
+  const { lang } = useLanguage();
+  const t = LOVE_BADGE[lang];
+
+  return (
+    <div className="relative flex w-fit items-center gap-3 rounded-2xl bg-[#f2f8f4] py-3 pr-6 pl-3">
+      {/* Hearts trail up and out of the card, centered on the SVG heart below, which is their source. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute bottom-full left-[-17px] h-[168px] w-[78px]"
+        style={{
+          maskImage: "linear-gradient(to top, black 50%, transparent 100%)",
+          WebkitMaskImage: "linear-gradient(to top, black 50%, transparent 100%)",
+        }}
+      >
+        <Lottie
+          animationData={heartsFeedbackLottie}
+          loop
+          rendererSettings={{ preserveAspectRatio: "xMidYMid meet" }}
+          className="h-full w-full"
+        />
+      </div>
+
+      <motion.div
+        animate={{ scale: [1, 1.18, 1] }}
+        transition={{ duration: 1.1, repeat: Infinity, ease: "easeInOut" }}
+        className="relative z-10 h-[19px] w-[20px] shrink-0"
+      >
+        <Image src="/images/testimonial/heart.svg" alt="" fill />
+      </motion.div>
+      <p className="relative z-10 whitespace-nowrap font-poppins text-sm leading-[19px] text-text-primary">
+        <span className="font-bold">{t.line1}</span> {t.line2}
+      </p>
+    </div>
+  );
+}
 
 const ARIA = {
   id: {
@@ -113,15 +153,14 @@ export default function TestimonialSection() {
       onMouseLeave={() => setPaused(false)}
     >
       <div className="mx-auto flex max-w-[1128px] flex-col items-center gap-10">
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5 }}
-          className="max-w-[552px] text-center font-poppins text-[18px] font-medium text-grape-dark"
         >
-          {HEADER[lang]}
-        </motion.p>
+          <LoveBadge />
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}

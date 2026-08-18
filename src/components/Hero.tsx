@@ -11,7 +11,13 @@ import {
 } from "framer-motion";
 import LegalityBar from "./LegalityBar";
 import { useLanguage } from "./LanguageProvider";
-import manageMoneyLottie from "@/lottie/manage-money.json";
+import manageMoneyLottieEn from "@/lottie/manage-money.json";
+import manageMoneyLottieId from "@/lottie/manage-money-id.json";
+
+const HERO_LOTTIE = {
+  id: manageMoneyLottieId,
+  en: manageMoneyLottieEn,
+};
 
 const COPY = {
   id: {
@@ -51,8 +57,6 @@ export default function Hero() {
   const blob1Y = useTransform(smoothMy, [0, 1], [-18, 18]);
   const blob2X = useTransform(smoothMx, [0, 1], [16, -16]);
   const blob2Y = useTransform(smoothMy, [0, 1], [16, -16]);
-  const ringX = useTransform(smoothMx, [0, 1], [-12, 12]);
-  const ringY = useTransform(smoothMy, [0, 1], [-12, 12]);
 
   // Soft light that tracks the pointer over the texture.
   const spotlightLeft = useTransform(smoothMx, (v) => `${v * 100}%`);
@@ -81,19 +85,19 @@ export default function Hero() {
       className="relative w-full overflow-hidden pt-[105px]"
       style={{
         backgroundImage:
-          "linear-gradient(146.5deg, #867BEF 14%, #6C5EEB 86%)",
+          "linear-gradient(146.5deg, #2CB9E4 14%, #0095C2 86%)",
       }}
     >
       {/* Depth — soft mesh light, so the flat gradient reads as layered */}
       <motion.div
         aria-hidden
         style={{ x: blob1X, y: blob1Y }}
-        className="pointer-events-none absolute -top-32 -left-24 h-[420px] w-[420px] rounded-full bg-grape-tint-2 opacity-40 blur-3xl"
+        className="pointer-events-none absolute -top-32 -left-24 h-[420px] w-[420px] rounded-full bg-[#7DD8F5] opacity-40 blur-3xl"
       />
       <motion.div
         aria-hidden
         style={{ x: blob2X, y: blob2Y }}
-        className="pointer-events-none absolute -bottom-40 -right-24 h-[520px] w-[520px] rounded-full bg-grape-dark opacity-50 blur-3xl"
+        className="pointer-events-none absolute -bottom-40 -right-24 h-[520px] w-[520px] rounded-full bg-[#006F94] opacity-50 blur-3xl"
       />
 
       {/* Texture — fine dot grid, a quiet nod to ledgers and data points */}
@@ -111,33 +115,6 @@ export default function Hero() {
           opacity: 0.5,
         }}
       />
-
-      {/* Signature — a slow-turning coin ring orbiting behind the phone */}
-      <motion.div
-        aria-hidden
-        style={{ x: ringX, y: ringY }}
-        className="pointer-events-none absolute left-1/2 top-[220px] hidden h-[640px] w-[640px] -translate-x-1/2 motion-safe:animate-[spin_70s_linear_infinite] lg:block"
-      >
-        <svg viewBox="0 0 640 640" className="h-full w-full">
-          <defs>
-            <linearGradient id="heroRingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#F3D08A" stopOpacity="0.9" />
-              <stop offset="55%" stopColor="#FFFFFF" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-          <circle
-            cx="320"
-            cy="320"
-            r="290"
-            fill="none"
-            stroke="url(#heroRingGradient)"
-            strokeWidth="1.5"
-            strokeDasharray="1184 638"
-            strokeLinecap="round"
-          />
-        </svg>
-      </motion.div>
 
       {/* Finish — faint grain so the gradient feels tactile, not flat vector */}
       <div
@@ -172,7 +149,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-            className="max-w-[820px] font-poppins text-[32px] font-semibold leading-tight sm:text-[42px] lg:text-[52px]"
+            className="max-w-[900px] font-poppins text-[28px] font-semibold leading-tight sm:max-w-none sm:whitespace-nowrap sm:text-[32px] lg:text-[50px]"
           >
             {t.headline}
           </motion.p>
@@ -199,10 +176,11 @@ export default function Hero() {
                   transformPerspective: 900,
                 }
           }
-          className="-mt-8 flex h-[370px] w-[291px] items-center justify-center sm:-mt-10 sm:h-[480px] sm:w-[377px] lg:-mt-14 lg:h-[620px] lg:w-[487px]"
+          className="-mt-4 flex h-[410px] w-[323px] items-center justify-center sm:-mt-4 sm:h-[535px] sm:w-[420px] lg:-mt-6 lg:h-[690px] lg:w-[542px]"
         >
           <Lottie
-            animationData={manageMoneyLottie}
+            key={lang}
+            animationData={HERO_LOTTIE[lang]}
             loop={false}
             rendererSettings={{ preserveAspectRatio: "xMidYMid meet" }}
             className="h-full w-full"

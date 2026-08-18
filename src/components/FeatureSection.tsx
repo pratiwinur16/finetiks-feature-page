@@ -26,16 +26,16 @@ const HEADER = {
 const ROWS = {
   id: [
     {
-      tag: "Voice Capture",
-      titleLines: ["Ngomong aja,", "FINETIKS yang catat"],
-      description:
-        "Ngomong aja secara natural, dan FINETIKS mengubah kata-katamu jadi transaksi yang terstruktur, sebelum detailnya keburu lupa.",
-    },
-    {
       tag: "Receipt Snap",
       titleLines: ["Jepret Struknya,", "Langsung Tercatat"],
       description:
         "Bagikan gambar dari aplikasi mana aja, dan FINETIKS otomatis mengenali merchant, jumlah, tanggal, dan detail penting lainnya.",
+    },
+    {
+      tag: "Voice Capture",
+      titleLines: ["Ngomong aja,", "FINETIKS yang catat"],
+      description:
+        "Ngomong aja secara natural, dan FINETIKS mengubah kata-katamu jadi transaksi yang terstruktur, sebelum detailnya keburu lupa.",
     },
     {
       tag: "Manual Input",
@@ -52,16 +52,16 @@ const ROWS = {
   ],
   en: [
     {
-      tag: "Voice Capture",
-      titleLines: ["Just talk,", "FINETIKS logs it"],
-      description:
-        "Speak naturally, and FINETIKS turns your words into a structured transaction before the details slip your mind.",
-    },
-    {
       tag: "Receipt Snap",
       titleLines: ["Snap the Receipt,", "It's Logged Instantly"],
       description:
         "Share an image from any app, and FINETIKS automatically recognizes the merchant, amount, date, and other key details.",
+    },
+    {
+      tag: "Voice Capture",
+      titleLines: ["Just talk,", "FINETIKS logs it"],
+      description:
+        "Speak naturally, and FINETIKS turns your words into a structured transaction before the details slip your mind.",
     },
     {
       tag: "Manual Input",
@@ -107,7 +107,7 @@ export default function FeatureSection() {
             tag={rows[0].tag}
             titleLines={rows[0].titleLines}
             description={rows[0].description}
-            image={<VoiceMockup />}
+            image={<SnapMockup />}
           />
 
           <FeatureRow
@@ -115,7 +115,7 @@ export default function FeatureSection() {
             tag={rows[1].tag}
             titleLines={rows[1].titleLines}
             description={rows[1].description}
-            image={<SnapMockup />}
+            image={<VoiceMockup />}
           />
 
           <FeatureRow

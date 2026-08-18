@@ -19,6 +19,8 @@
   --color-grape-tint-1: #867bef;
   --color-grape-tint-2: #9e95f2;
   --color-grape-tint-3: #b7b0f5;
+  --color-grape-tint-5: #e7e5fc;
+  --color-grape-shade-1: #412fe5;
 
   /* Text */
   --color-text-primary: #475569;
@@ -44,4 +46,13 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }

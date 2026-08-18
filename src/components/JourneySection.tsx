@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useLayoutEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { useLanguage } from "./LanguageProvider";
 
 type Slide = {
@@ -107,15 +107,20 @@ const ARIA = {
     goTo: (i: number) => `Ke slide ${i}`,
     prev: "Slide sebelumnya",
     next: "Slide selanjutnya",
+    pause: "Jeda putar otomatis",
+    play: "Lanjutkan putar otomatis",
   },
   en: {
     goTo: (i: number) => `Go to slide ${i}`,
     prev: "Previous slide",
     next: "Next slide",
+    pause: "Pause autoplay",
+    play: "Resume autoplay",
   },
 };
 
 const DWELL_MS = 6000;
+const SLIDE_GAP = 48;
 
 // Exact path data from the Figma "keyboard_arrow_left/right" export.
 function ArrowIcon({ direction }: { direction: "left" | "right" }) {
@@ -136,30 +141,65 @@ function ArrowIcon({ direction }: { direction: "left" | "right" }) {
   );
 }
 
+function PlayPauseIcon({ playing }: { playing: boolean }) {
+  return playing ? (
+    <svg width="14" height="16" viewBox="0 0 14 16" fill="none">
+      <rect x="0" y="0" width="4" height="16" rx="1" fill="currentColor" />
+      <rect x="10" y="0" width="4" height="16" rx="1" fill="currentColor" />
+    </svg>
+  ) : (
+    <svg width="14" height="16" viewBox="0 0 14 16" fill="none">
+      <path
+        d="M0 1.5C0 0.3 1.3-0.5 2.4 0.2L13.4 7.2C14.5 7.9 14.5 9.1 13.4 9.8L2.4 16.8C1.3 17.5 0 16.7 0 15.5V1.5Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
 export default function JourneySection() {
   const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
+  const [autoplay, setAutoplay] = useState(true);
+  const [hovering, setHovering] = useState(false);
+  const [viewportWidth, setViewportWidth] = useState(0);
+  const viewportRef = useRef<HTMLDivElement>(null);
   const { lang } = useLanguage();
   const slides = SLIDES[lang];
   const header = HEADER[lang];
   const aria = ARIA[lang];
 
-  const goTo = (i: number) => setIndex(((i % slides.length) + slides.length) % slides.length);
-  const next = () => goTo(index + 1);
-  const prev = () => goTo(index - 1);
-  const nextSlide = slides[(index + 1) % slides.length];
+  const paused = !autoplay || hovering;
 
-  useEffect(() => {
+  const goTo = (i: number, manual = false) => {
+    setIndex(((i % slides.length) + slides.length) % slides.length);
+    if (manual) setAutoplay(false);
+  };
+
+  useLayoutEffect(() => {
     if (paused) return;
-    const timer = setTimeout(next, DWELL_MS);
+    const timer = setTimeout(() => goTo(index + 1), DWELL_MS);
     return () => clearTimeout(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index, paused]);
 
-  const slide = slides[index];
+  useLayoutEffect(() => {
+    const el = viewportRef.current;
+    if (!el) return;
+    const update = () => setViewportWidth(el.clientWidth);
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const slideRatio = viewportWidth < 640 ? 0.86 : 0.793;
+  const slideWidth = Math.round(viewportWidth * slideRatio);
+  const trackTranslate = viewportWidth
+    ? (viewportWidth - slideWidth) / 2 - index * (slideWidth + SLIDE_GAP)
+    : 0;
 
   return (
-    <section className="w-full bg-white px-6 py-16 sm:py-24 lg:py-[128px]">
+    <section className="w-full overflow-x-clip bg-white px-6 py-16 sm:py-24 lg:py-[128px]">
       <div className="mx-auto flex max-w-[1128px] flex-col items-center gap-12 lg:gap-[68px]">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -171,123 +211,147 @@ export default function JourneySection() {
           <h2 className="font-poppins text-[28px] font-bold leading-tight text-grape-dark sm:text-[40px] sm:leading-[54px]">
             {header.title}
           </h2>
-          <p className="max-w-[720px] font-poppins text-[16px] leading-relaxed text-text-secondary sm:text-[18px] sm:leading-[24px]">
+          <p className="max-w-[320px] font-poppins text-[16px] leading-relaxed text-text-secondary sm:max-w-[1040px] sm:text-[18px] sm:leading-[24px]">
             {header.subtitle}
           </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
-          className="flex w-full flex-col items-center gap-8"
-        >
-          <div className="flex w-full items-stretch gap-3 sm:gap-4 lg:gap-[28px]">
-            <div className="relative min-w-0 flex-1 overflow-hidden rounded-[24px] lg:rounded-[28px]">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={slide.id}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                  style={{ backgroundColor: slide.bg }}
-                  className="flex w-full flex-col lg:h-[440px] lg:flex-row"
-                >
-                  <div className="relative z-10 flex flex-1 flex-col justify-center gap-5 p-7 sm:gap-6 sm:p-10 lg:max-w-[420px] lg:p-14">
-                    <h3 className="font-poppins text-[24px] font-bold leading-tight text-white sm:text-[32px] sm:leading-[43px]">
-                      {slide.title}
-                    </h3>
-                    <p className="font-poppins text-[15px] leading-relaxed text-white/90 sm:text-[16px] sm:leading-[26px]">
-                      {slide.description}
-                    </p>
-                    <a
-                      href="#"
-                      className="mt-1 inline-flex w-fit items-center justify-center rounded-xl bg-grape-tint-5 px-6 py-4 font-poppins text-[15px] font-bold text-[#412fe5] transition-transform duration-200 hover:scale-[1.02] sm:px-8 sm:text-[16px]"
-                    >
-                      {slide.cta}
-                    </a>
-                  </div>
+      </div>
 
-                  <div className="relative min-h-[220px] flex-1 sm:min-h-[300px] lg:min-h-full">
-                    <Image
-                      src={slide.image}
-                      alt={slide.imageAlt}
-                      fill
-                      className="object-cover"
-                      sizes="(min-width: 1024px) 440px, 100vw"
-                      priority={index === 0}
-                    />
-                    <div className="absolute inset-0" style={{ backgroundColor: "#000", opacity: slide.overlay }} />
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-            </div>
-
-            <button
-              type="button"
-              onClick={next}
-              aria-label={aria.next}
-              style={{ backgroundColor: nextSlide.bg }}
-              className="hidden w-8 shrink-0 rounded-[24px] transition-opacity duration-300 hover:opacity-80 sm:block lg:w-14 lg:rounded-[28px]"
-            />
-          </div>
-
-          <div className="flex items-center gap-6 sm:gap-9">
-            <button
-              type="button"
-              onClick={prev}
-              aria-label={aria.prev}
-              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-l-xl bg-neutral-200 text-text-tertiary transition-colors duration-200 hover:bg-grape-tint-3/40 sm:h-14 sm:w-14"
+      {/* Full-bleed peek carousel — breaks out of the max-w column so the previous/next
+          cards' colors show at the edges, like Monzo's carousel. Kept outside any
+          motion.div: framer-motion leaves a resting `transform` on animated elements,
+          which would create a new containing block and break the left-1/2/-translate-x-1/2
+          full-bleed trick below. */}
+      <div className="mt-12 w-full lg:mt-[68px]">
+          <div className="relative left-1/2 w-screen -translate-x-1/2">
+            <div
+              ref={viewportRef}
+              onMouseEnter={() => setHovering(true)}
+              onMouseLeave={() => setHovering(false)}
+              className="overflow-hidden"
             >
-              <ArrowIcon direction="left" />
-            </button>
-
-            <div className="flex items-center gap-2">
-              {slides.map((s, i) => (
-                <button
-                  key={s.id}
-                  type="button"
-                  onClick={() => goTo(i)}
-                  aria-label={aria.goTo(i + 1)}
-                  className="flex items-center"
-                >
-                  <motion.span
-                    animate={{ width: index === i ? 34 : 8 }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                    className={`relative h-[5px] overflow-hidden rounded-full ${
-                      index === i ? "bg-grape/20" : "bg-grape-tint-3"
-                    }`}
+              <div
+                className="flex"
+                style={{
+                  gap: `${SLIDE_GAP}px`,
+                  transform: `translateX(${trackTranslate}px)`,
+                  transition: "transform 0.6s cubic-bezier(0.65, 0, 0.35, 1)",
+                }}
+              >
+                {slides.map((s, i) => (
+                  <div
+                    key={s.id}
+                    style={
+                      slideWidth
+                        ? { flex: `0 0 ${slideWidth}px` }
+                        : undefined
+                    }
+                    className="flex w-[86%] shrink-0 flex-col overflow-hidden rounded-[24px] sm:w-[79.3%] lg:flex-row lg:rounded-[32px]"
                   >
-                    {index === i && !paused && (
-                      <motion.span
-                        key={index}
-                        className="absolute inset-y-0 left-0 rounded-full bg-grape"
-                        initial={{ width: "0%" }}
-                        animate={{ width: "100%" }}
-                        transition={{ duration: DWELL_MS / 1000, ease: "linear" }}
-                      />
-                    )}
-                  </motion.span>
-                </button>
-              ))}
-            </div>
+                    <div
+                      style={{ backgroundColor: s.bg }}
+                      className="relative z-10 flex flex-col justify-center gap-5 p-7 sm:gap-6 sm:p-10 lg:w-1/2 lg:p-14"
+                    >
+                      <h3 className="font-poppins text-[24px] font-bold leading-tight text-white sm:text-[32px] sm:leading-[43px]">
+                        {s.title}
+                      </h3>
+                      <p className="font-poppins text-[15px] leading-relaxed text-white/90 sm:text-[16px] sm:leading-[26px]">
+                        {s.description}
+                      </p>
+                      <a
+                        href="#"
+                        className="mt-1 flex h-14 w-full max-w-[290px] items-center justify-center rounded-xl bg-grape-tint-5 px-4 font-poppins text-[16px] font-bold text-grape-shade-1 transition-transform duration-200 hover:scale-[1.02]"
+                      >
+                        {s.cta}
+                      </a>
+                    </div>
 
-            <motion.button
-              type="button"
-              onClick={next}
-              aria-label={aria.next}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-r-xl bg-grape text-white transition-colors duration-200 hover:bg-grape-dark sm:h-14 sm:w-14"
-            >
-              <ArrowIcon direction="right" />
-            </motion.button>
+                    <div
+                      style={{ backgroundColor: s.bg }}
+                      className="relative min-h-[220px] sm:min-h-[300px] lg:min-h-full lg:w-1/2"
+                    >
+                      <Image
+                        src={s.image}
+                        alt={s.imageAlt}
+                        fill
+                        className="object-cover"
+                        sizes="(min-width: 1024px) 41vw, 100vw"
+                        priority={i === 0}
+                      />
+                      <div
+                        className="absolute inset-0"
+                        style={{ backgroundColor: "#000", opacity: s.overlay }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-        </motion.div>
+      </div>
+
+      <div className="mx-auto mt-8 flex max-w-[1128px] items-center justify-center gap-5 sm:mt-10 sm:gap-6">
+        <button
+          type="button"
+          onClick={() => setAutoplay((a) => !a)}
+          aria-label={autoplay ? aria.pause : aria.play}
+          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-grape-tint-3 text-grape transition-colors duration-200 hover:bg-grape-tint-3/20"
+        >
+          <PlayPauseIcon playing={autoplay} />
+        </button>
+
+        <motion.button
+          type="button"
+          onClick={() => goTo(index - 1, true)}
+          aria-label={aria.prev}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-grape text-white transition-colors duration-200 hover:bg-grape-dark"
+        >
+          <ArrowIcon direction="left" />
+        </motion.button>
+
+        <div className="flex items-center gap-2">
+          {slides.map((s, i) => (
+            <button
+              key={s.id}
+              type="button"
+              onClick={() => goTo(i, true)}
+              aria-label={aria.goTo(i + 1)}
+              className="flex items-center"
+            >
+              <motion.span
+                animate={{ width: index === i ? 34 : 8 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                className={`relative h-[5px] overflow-hidden rounded-full ${
+                  index === i ? "bg-grape/20" : "bg-grape-tint-3"
+                }`}
+              >
+                {index === i && !paused && (
+                  <motion.span
+                    key={index}
+                    className="absolute inset-y-0 left-0 rounded-full bg-grape"
+                    initial={{ width: "0%" }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: DWELL_MS / 1000, ease: "linear" }}
+                  />
+                )}
+              </motion.span>
+            </button>
+          ))}
+        </div>
+
+        <motion.button
+          type="button"
+          onClick={() => goTo(index + 1, true)}
+          aria-label={aria.next}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-grape text-white transition-colors duration-200 hover:bg-grape-dark"
+        >
+          <ArrowIcon direction="right" />
+        </motion.button>
       </div>
     </section>
   );

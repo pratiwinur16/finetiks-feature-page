@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { List, X } from "@phosphor-icons/react";
 import { useLanguage } from "./LanguageProvider";
 
 const NAV_LINKS = {
@@ -30,6 +31,7 @@ const DOWNLOAD_LABEL = {
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const { lang, setLang } = useLanguage();
   const navLinks = NAV_LINKS[lang];
 
@@ -54,9 +56,9 @@ export default function Navbar() {
           : "0 2px 8px rgba(0,0,0,0)",
       }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 h-[105px]"
+      className="fixed top-0 left-0 right-0 z-50"
     >
-      <div className="mx-auto flex h-full max-w-[1440px] items-center justify-center gap-[33px] px-6">
+      <div className="mx-auto flex h-[105px] max-w-[1440px] items-center justify-between gap-[33px] px-6 md:justify-center">
         <Link href="/" className="relative h-[26px] w-[137px] shrink-0">
           <Image
             src="/images/logo-finetiks-nav.svg"
@@ -77,7 +79,7 @@ export default function Navbar() {
           />
         </Link>
 
-        <nav className="flex items-center gap-3">
+        <nav className="hidden items-center gap-3 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.label}
@@ -120,7 +122,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-[19px]">
+        <div className="hidden items-center gap-[19px] md:flex">
           <motion.button
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
@@ -165,7 +167,106 @@ export default function Navbar() {
             </button>
           </div>
         </div>
+
+        <button
+          type="button"
+          onClick={() => setMobileOpen((open) => !open)}
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileOpen}
+          className={`flex h-10 w-10 items-center justify-center rounded-md ${textColor} transition-colors duration-300 md:hidden`}
+        >
+          {mobileOpen ? <X size={26} weight="bold" /> : <List size={26} weight="bold" />}
+        </button>
       </div>
+
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="overflow-hidden border-t border-neutral-200 bg-white md:hidden"
+          >
+            <nav className="flex flex-col px-6 py-2">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`flex items-center justify-between border-b border-neutral-200 py-3 text-base ${
+                    link.active ? "font-bold text-grape" : "font-semibold text-text-primary"
+                  }`}
+                >
+                  {link.label}
+                  {link.hasDropdown && (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="m6 9 6 6 6-6"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  )}
+                </Link>
+              ))}
+            </nav>
+
+            <div className="flex flex-col gap-4 px-6 pb-6 pt-2">
+              <button className="flex w-full items-center justify-center gap-0.5 rounded-md bg-black px-4 py-3 text-white shadow-md">
+                <span className="whitespace-nowrap text-base font-bold">
+                  {DOWNLOAD_LABEL[lang]}
+                </span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <rect
+                    x="7"
+                    y="2"
+                    width="10"
+                    height="20"
+                    rx="2"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                  />
+                  <path
+                    d="M11 18h2"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </button>
+
+              <div className="flex h-[41px] w-[127px] items-center justify-center gap-2 self-center rounded-3xl border border-grape-tint-2 bg-neutral-100 p-2">
+                <button
+                  onClick={() => setLang("id")}
+                  className={`flex items-center gap-1.5 text-sm transition-colors ${
+                    lang === "id"
+                      ? "font-bold text-text-primary"
+                      : "font-medium text-text-tertiary"
+                  }`}
+                >
+                  ID
+                  <span className="text-base leading-none">🇮🇩</span>
+                </button>
+                <span className="h-[25px] w-px rotate-90 rounded-md bg-grape/20" />
+                <button
+                  onClick={() => setLang("en")}
+                  className={`flex items-center gap-1.5 text-sm transition-colors ${
+                    lang === "en"
+                      ? "font-bold text-text-primary"
+                      : "font-medium text-text-tertiary"
+                  }`}
+                >
+                  EN
+                  <span className="text-base leading-none">🇬🇧</span>
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }

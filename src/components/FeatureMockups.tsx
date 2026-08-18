@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import insightLottiePreview from "@/lottie/insight.json";
+import manualLottiePreview from "@/lottie/manual.json";
 import { useLanguage } from "./LanguageProvider";
 
 const VOICE_CHIPS = {
@@ -44,6 +45,7 @@ const CATEGORY_LABELS = {
 
 // TEMP: quick look at the Lottie export — flip to false to go back to the hand-built version.
 const SHOW_INSIGHT_LOTTIE_PREVIEW = true;
+const SHOW_MANUAL_LOTTIE_PREVIEW = true;
 
 const cardVariants = {
   hidden: {},
@@ -253,6 +255,14 @@ const sparkles = [
 ];
 
 export function ManualMockup() {
+  if (SHOW_MANUAL_LOTTIE_PREVIEW) {
+    return (
+      <div className="relative h-[320px] w-[320px] overflow-hidden rounded-3xl bg-card p-8 shadow-[0_2px_8px_rgba(0,0,0,0.1)] sm:h-[400px] sm:w-[440px] sm:p-10 lg:h-[449px] lg:w-[527px] lg:p-12">
+        <Lottie animationData={manualLottiePreview} loop className="h-full w-full" />
+      </div>
+    );
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}

@@ -8,7 +8,7 @@ import {
   Quotes,
   Receipt,
   Stack,
-  Tag,
+  Wallet,
   type Icon,
 } from "@phosphor-icons/react";
 import { useLanguage } from "./LanguageProvider";
@@ -47,9 +47,9 @@ const PAINS: Record<"id" | "en", Pain[]> = {
       color: "#FF6666",
     },
     {
-      quote: "Ini masuk kategori jajan apa kebutuhan sih? Bingung.",
-      label: "Bingung kategori",
-      Icon: Tag,
+      quote: "Bayar cash, jadi nggak ada catatannya sama sekali.",
+      label: "Transaksi cash nggak ke-track",
+      Icon: Wallet,
       angle: 2,
       color: "#1A9DC5",
     },
@@ -84,9 +84,9 @@ const PAINS: Record<"id" | "en", Pain[]> = {
       color: "#FF6666",
     },
     {
-      quote: "Is this a want or a need? I can never tell.",
-      label: "Confusing categories",
-      Icon: Tag,
+      quote: "I paid cash, so there's no record of it anywhere.",
+      label: "Cash spending goes untracked",
+      Icon: Wallet,
       angle: 2,
       color: "#1A9DC5",
     },
@@ -223,7 +223,7 @@ export default function ProblemFramingSectionV2() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="flex w-full flex-col items-center gap-5 text-center"
         >
-          <h2 className="max-w-[780px] font-poppins text-[32px] font-bold leading-tight text-text-primary sm:text-[44px] sm:leading-[52px]">
+          <h2 className="max-w-[780px] font-poppins text-[32px] font-bold leading-tight text-grape-dark sm:text-[44px] sm:leading-[52px]">
             {header.title}
           </h2>
           <p className="max-w-[700px] font-poppins text-[17px] leading-[26px] text-text-secondary sm:text-[19px] sm:leading-[30px]">

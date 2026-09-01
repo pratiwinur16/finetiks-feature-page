@@ -33,7 +33,7 @@ const ROWS = {
     },
     {
       tag: "Voice Capture",
-      titleLines: ["Ngomong aja,", "FINETIKS yang catat"],
+      titleLines: ["Cukup ngomong,", "tercatat seketika"],
       description:
         "Ngomong aja secara natural, dan FINETIKS mengubah kata-katamu jadi transaksi yang terstruktur, sebelum detailnya keburu lupa.",
     },
@@ -59,7 +59,7 @@ const ROWS = {
     },
     {
       tag: "Voice Capture",
-      titleLines: ["Just talk,", "FINETIKS logs it"],
+      titleLines: ["Talk it through,", "logged in seconds"],
       description:
         "Speak naturally, and FINETIKS turns your words into a structured transaction before the details slip your mind.",
     },

@@ -17,29 +17,28 @@ function LoveBadge() {
   const t = LOVE_BADGE[lang];
 
   return (
-    <div className="relative flex w-fit items-center gap-3 rounded-2xl bg-[#f2f8f4] py-3 pr-6 pl-3">
-      {/* Hearts trail up and out of the card, centered on the SVG heart below, which is their source. */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute bottom-full left-[-17px] h-[168px] w-[78px]"
-        style={{
-          maskImage: "linear-gradient(to top, black 50%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to top, black 50%, transparent 100%)",
-        }}
-      >
-        <Lottie
-          animationData={heartsFeedbackLottie}
-          loop
-          rendererSettings={{ preserveAspectRatio: "xMidYMid meet" }}
-          className="h-full w-full"
-        />
-      </div>
-
+    <div className="flex w-fit items-center gap-3 rounded-2xl bg-[#f2f8f4] py-3 pr-6 pl-3">
       <motion.div
         animate={{ scale: [1, 1.18, 1] }}
         transition={{ duration: 1.1, repeat: Infinity, ease: "easeInOut" }}
         className="relative z-10 h-[19px] w-[20px] shrink-0"
       >
+        {/* Hearts trail up and out, centered on and anchored to this SVG heart, which is their source. */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute bottom-full left-1/2 h-[168px] w-[78px] -translate-x-1/2"
+          style={{
+            maskImage: "linear-gradient(to top, black 50%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to top, black 50%, transparent 100%)",
+          }}
+        >
+          <Lottie
+            animationData={heartsFeedbackLottie}
+            loop
+            rendererSettings={{ preserveAspectRatio: "xMidYMid meet" }}
+            className="h-full w-full"
+          />
+        </div>
         <Image src="/images/testimonial/heart.svg" alt="" fill />
       </motion.div>
       <p className="relative z-10 whitespace-nowrap font-poppins text-sm leading-[19px] text-text-primary">

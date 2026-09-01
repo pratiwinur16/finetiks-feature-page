@@ -276,7 +276,7 @@ function StageCard({
       </div>
 
       <div className="flex shrink-0 flex-col items-center gap-2">
-        <div className="relative h-[190px] w-[170px] overflow-hidden rounded-[24px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.4)] sm:h-[280px] sm:w-[240px] lg:h-[460px] lg:w-[430px] lg:rounded-[28px]">
+        <div className="relative h-[240px] w-[215px] overflow-hidden rounded-[24px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.4)] sm:h-[280px] sm:w-[240px] lg:h-[460px] lg:w-[430px] lg:rounded-[28px]">
           <Image
             src={stage.image}
             alt={stage.imageAlt}
@@ -288,22 +288,22 @@ function StageCard({
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/10" />
           {stage.id === "record" && (
             <div className="absolute inset-0 flex items-center justify-center p-4">
-              <Lottie animationData={analyticLottie} loop className="h-[80%] w-[80%]" />
+              <Lottie animationData={analyticLottie} loop className="h-[95%] w-[95%] sm:h-[80%] sm:w-[80%]" />
             </div>
           )}
           {stage.id === "invest" && (
             <div className="absolute inset-0 flex items-center justify-center p-4">
-              <Lottie animationData={investLottie} loop className="h-[80%] w-[80%]" />
+              <Lottie animationData={investLottie} loop className="h-[95%] w-[95%] sm:h-[80%] sm:w-[80%]" />
             </div>
           )}
           {stage.id === "saving" && saveLottieData && (
             <div className="absolute inset-0 flex items-center justify-center p-4">
-              <Lottie animationData={saveLottieData} loop className="h-[80%] w-[80%]" />
+              <Lottie animationData={saveLottieData} loop className="h-[95%] w-[95%] sm:h-[80%] sm:w-[80%]" />
             </div>
           )}
         </div>
         {stage.id === "invest" && (
-          <p className="max-w-[170px] text-center font-poppins text-[10px] leading-tight text-white/70 sm:max-w-[240px] sm:text-[11px] lg:max-w-[430px] lg:text-[12px]">
+          <p className="max-w-[215px] text-center font-poppins text-[10px] leading-tight text-white/70 sm:max-w-[240px] sm:text-[11px] lg:max-w-[430px] lg:text-[12px]">
             {INVEST_DISCLAIMER[lang]}
           </p>
         )}
@@ -363,7 +363,7 @@ export default function JourneySectionV7() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="flex w-full flex-col items-center gap-4 text-center"
         >
-          <h2 className="font-poppins text-[28px] font-bold leading-tight text-grape-dark sm:text-[40px] sm:leading-[54px]">
+          <h2 className="font-poppins text-[32px] font-bold leading-tight text-grape-dark sm:text-[44px] sm:leading-[52px]">
             {header.title}
           </h2>
           <p className="max-w-[320px] font-poppins text-[16px] leading-relaxed text-text-secondary sm:max-w-[640px] sm:text-[18px]">

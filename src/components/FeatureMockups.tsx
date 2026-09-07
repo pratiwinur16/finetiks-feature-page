@@ -62,17 +62,16 @@ const chipVariants = {
 function Chip({
   icon,
   label,
-  style,
+  position,
 }: {
   icon: string;
   label: string;
-  style: React.CSSProperties;
+  position: string;
 }) {
   return (
     <motion.div
       variants={chipVariants}
-      className="absolute flex items-center gap-2 rounded-2xl bg-white px-3 py-1 shadow-[0_4px_8px_rgba(0,0,0,0.16)]"
-      style={style}
+      className={`absolute flex items-center gap-2 rounded-2xl bg-white px-3 py-1 shadow-[0_4px_8px_rgba(0,0,0,0.16)] ${position}`}
     >
       <Image src={icon} alt="" width={16} height={16} />
       <span className="whitespace-nowrap font-manrope text-sm font-semibold text-text-secondary">
@@ -182,11 +181,11 @@ export function VoiceMockup() {
           <AnimatedWaveform />
         </motion.div>
       </div>
-      <Chip icon="/images/icon-chip-today.svg" label={chips.today} style={{ left: "11%", top: "21%" }} />
-      <Chip icon="/images/icon-chip-lunch.svg" label={chips.shop} style={{ left: "46%", top: "12%" }} />
-      <Chip icon="/images/icon-chip-storefront.svg" label={chips.at} style={{ left: "79%", top: "34%" }} />
-      <Chip icon="/images/icon-chip-creditcard.svg" label={chips.using} style={{ left: "70%", top: "54%" }} />
-      <Chip icon="/images/icon-chip-payments.svg" label={chips.amount} style={{ left: "4%", top: "57%" }} />
+      <Chip icon="/images/icon-chip-today.svg" label={chips.today} position="left-[11%] top-[21%]" />
+      <Chip icon="/images/icon-chip-lunch.svg" label={chips.shop} position="left-[46%] top-[12%]" />
+      <Chip icon="/images/icon-chip-storefront.svg" label={chips.at} position="left-[58%] top-[34%] sm:left-[79%]" />
+      <Chip icon="/images/icon-chip-creditcard.svg" label={chips.using} position="left-[42%] top-[54%] sm:left-[70%]" />
+      <Chip icon="/images/icon-chip-payments.svg" label={chips.amount} position="left-[4%] top-[57%]" />
     </motion.div>
   );
 }

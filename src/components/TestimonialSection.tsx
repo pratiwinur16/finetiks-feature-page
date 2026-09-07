@@ -80,13 +80,13 @@ const TESTIMONIALS: Testimonial[] = [
   {
     quote:
       "This app impresses me with its features — especially the budget tracking and insights based on spending patterns. It has genuinely helped me make smarter financial decisions.",
-    name: "ANNISA AYU AVRILLIA",
+    name: "ANNISA",
     date: "March 31, 2023",
   },
   {
     quote:
       "Very user-friendly. Simple, effective, and hasn’t given me any problems so far.",
-    name: "HERRY ELBERT",
+    name: "HERRY",
     date: "April 17, 2023",
   },
   {

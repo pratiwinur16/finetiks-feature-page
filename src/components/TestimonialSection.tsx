@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Lottie from "lottie-react";
-import { useLanguage } from "./LanguageProvider";
+import { useLanguage, type Lang } from "./LanguageProvider";
 import heartsFeedbackLottie from "@/lottie/hearts-feedback.json";
 
 const LOVE_BADGE = {
@@ -71,33 +71,41 @@ function calcDwellMs(featuredQuote: string, secondaryQuotes: string[]) {
 }
 
 type Testimonial = {
-  quote: string;
+  quote: Record<Lang, string>;
   name: string;
   date: string;
 };
 
 const TESTIMONIALS: Testimonial[] = [
   {
-    quote:
-      "This app impresses me with its features — especially the budget tracking and insights based on spending patterns. It has genuinely helped me make smarter financial decisions.",
+    quote: {
+      en: "This app impresses me with its features — especially the budget tracking and insights based on spending patterns. It has genuinely helped me make smarter financial decisions.",
+      id: "Aplikasi ini bikin saya kagum dengan fitur-fiturnya — terutama pelacakan anggaran dan insight berdasarkan pola pengeluaran. Aplikasi ini benar-benar membantu saya membuat keputusan finansial yang lebih cerdas.",
+    },
     name: "ANNISA",
     date: "March 31, 2023",
   },
   {
-    quote:
-      "Very user-friendly. Simple, effective, and hasn’t given me any problems so far.",
+    quote: {
+      en: "Very user-friendly. Simple, effective, and hasn’t given me any problems so far.",
+      id: "Sangat mudah digunakan. Simpel, efektif, dan sejauh ini belum pernah ada masalah.",
+    },
     name: "HERRY",
     date: "April 17, 2023",
   },
   {
-    quote:
-      "Great for tracking spending and keeping up with savings. Overall a great app.",
+    quote: {
+      en: "Great for tracking spending and keeping up with savings. Overall a great app.",
+      id: "Bagus untuk melacak pengeluaran dan menjaga tabungan tetap konsisten. Secara keseluruhan aplikasi yang bagus.",
+    },
     name: "KEVIN",
     date: "April 7, 2023",
   },
   {
-    quote:
-      "Looking forward to using this daily as account connection options expand.",
+    quote: {
+      en: "Looking forward to using this daily as account connection options expand.",
+      id: "Tidak sabar menggunakan ini setiap hari seiring bertambahnya opsi koneksi akun.",
+    },
     name: "JOVAN",
     date: "April 3, 2023",
   },
@@ -134,8 +142,8 @@ export default function TestimonialSection() {
   };
 
   const dwellMs = calcDwellMs(
-    featured.quote,
-    secondary.map((s) => s.quote)
+    featured.quote[lang],
+    secondary.map((s) => s.quote[lang])
   );
 
   useEffect(() => {
@@ -177,7 +185,7 @@ export default function TestimonialSection() {
               transition={{ duration: 0.35 }}
               className="text-center font-poppins text-[24px] font-medium leading-[1.4] text-text-primary sm:text-[32px] sm:leading-[43px]"
             >
-              “{featured.quote}”
+              “{featured.quote[lang]}”
             </motion.p>
           </AnimatePresence>
           <Stars />
@@ -206,7 +214,7 @@ export default function TestimonialSection() {
             >
               <Stars />
               <p className="font-poppins text-base leading-[21px] text-text-secondary">
-                “{t.quote}”
+                “{t.quote[lang]}”
               </p>
               <p className="font-poppins text-sm text-text-primary">{t.name}</p>
               <p className="font-poppins text-[10px] text-text-secondary">

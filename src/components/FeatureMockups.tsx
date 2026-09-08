@@ -71,10 +71,10 @@ function Chip({
   return (
     <motion.div
       variants={chipVariants}
-      className={`absolute flex items-center gap-2 rounded-2xl bg-white px-3 py-1 shadow-[0_4px_8px_rgba(0,0,0,0.16)] ${position}`}
+      className={`absolute flex items-center gap-1.5 rounded-2xl bg-white px-2 py-1 shadow-[0_4px_8px_rgba(0,0,0,0.16)] sm:gap-2 sm:px-3 ${position}`}
     >
-      <Image src={icon} alt="" width={16} height={16} />
-      <span className="whitespace-nowrap font-manrope text-sm font-semibold text-text-secondary">
+      <Image src={icon} alt="" width={16} height={16} className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+      <span className="whitespace-nowrap font-manrope text-xs font-semibold text-text-secondary sm:text-sm">
         {label}
       </span>
     </motion.div>
@@ -121,13 +121,10 @@ function barEnvelope(i: number) {
 function AnimatedWaveform() {
   const bars = 46;
   return (
-    <div
-      className="pointer-events-none absolute overflow-hidden"
-      style={{ left: "4%", width: "92%", top: "70%", height: "18%" }}
-    >
+    <div className="pointer-events-none absolute left-[4%] top-[70%] h-[18%] w-[92%] overflow-hidden">
       {/* covers the static waveform baked into the source image */}
       <div className="absolute inset-0 bg-card" />
-      <div className="absolute inset-0 flex items-center justify-between gap-[2px]">
+      <div className="absolute inset-x-0 bottom-0 flex h-[65%] items-center justify-between gap-[2px] sm:inset-0 sm:h-auto">
         {Array.from({ length: bars }).map((_, i) => {
           const base = barEnvelope(i);
           return (
@@ -181,11 +178,11 @@ export function VoiceMockup() {
           <AnimatedWaveform />
         </motion.div>
       </div>
-      <Chip icon="/images/icon-chip-today.svg" label={chips.today} position="left-[11%] top-[21%]" />
-      <Chip icon="/images/icon-chip-lunch.svg" label={chips.shop} position="left-[46%] top-[12%]" />
-      <Chip icon="/images/icon-chip-storefront.svg" label={chips.at} position="left-[58%] top-[34%] sm:left-[79%]" />
-      <Chip icon="/images/icon-chip-creditcard.svg" label={chips.using} position="left-[42%] top-[54%] sm:left-[70%]" />
-      <Chip icon="/images/icon-chip-payments.svg" label={chips.amount} position="left-[4%] top-[57%]" />
+      <Chip icon="/images/icon-chip-today.svg" label={chips.today} position="left-[6%] top-[20%] sm:left-[11%] sm:top-[21%]" />
+      <Chip icon="/images/icon-chip-lunch.svg" label={chips.shop} position="left-[40%] top-[8%] sm:left-[46%] sm:top-[12%]" />
+      <Chip icon="/images/icon-chip-storefront.svg" label={chips.at} position="left-[64%] top-[32%] sm:left-[79%] sm:top-[34%]" />
+      <Chip icon="/images/icon-chip-creditcard.svg" label={chips.using} position="left-[58%] top-[48%] sm:left-[70%] sm:top-[54%]" />
+      <Chip icon="/images/icon-chip-payments.svg" label={chips.amount} position="left-[4%] top-[62%] sm:top-[57%]" />
     </motion.div>
   );
 }
